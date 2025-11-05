@@ -79,7 +79,7 @@ def main():
     
 
     # create map with islands
-    map_grid = setIslands(
+    setIslands(
         a_coord_x,
         a_coord_y,
         b_coord_x,
