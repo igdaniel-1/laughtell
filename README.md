@@ -1,7 +1,7 @@
 # laughtell
 Probabilist Map Grapher for One Piece's Laugh Tell Location
 
--- Premise
+## Premise
 There exists a treasure island hidden so that its location can only be 
 determined by the coordinates of 4 other islands. 
 
@@ -11,7 +11,7 @@ Instead of looking for that last set of coordinates, could a pirate
 with a laptop find the last hidden island?
 
 
--- Context
+## Context
 There's a TV show called One Piece where the protagonist is searching
 for the aforementioned hidden island. He has the coordinates to 3 of
 the 4 islands, and is visibly struggling to find the 4th. Once he has 
@@ -19,7 +19,7 @@ four, he can connect the islands on the map to find the King of the
 Pirates treasure, pretty awesome stuff.
 
 
--- Locating the 5th island
+## Locating the 5th island
 What this program does is display a map of the most 'probable' locations 
 where the 5th island could be. It's probable and not the exact location 
 because this program throws a dart at each latitude and logitude on the map...
