@@ -8,9 +8,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def setIslands(
-    map_x,
-    map_y,
-    map_grid,
     a_coord_x,
     a_coord_y,
     b_coord_x,
@@ -21,23 +18,55 @@ def setIslands(
 
     print("in here")
 
-    # trying to set the spaces with the letters A, B, or C
+    # plot points A, B, and C
+    plt.plot(a_coord_x, a_coord_y, ".")
+    plt.plot(b_coord_x, b_coord_y, ".")
+    plt.plot(c_coord_x, c_coord_y, ".")
 
 
     # TEST
     # print(map_grid[a_coord_x][a_coord_y])
-    return map_grid
+    # return map_grid
+
+def setPossibleDLocations(
+    a_coord_x,
+    a_coord_y,
+    b_coord_x,
+    b_coord_y,
+    c_coord_x,
+    c_coord_y,
+):
+    # for all grid locations
+    # if grid location != island A|B|C --> possible D location
+
+
+    # A to B, C to D CHECK
+    # create a line from A to B
+    # create another line from C to D
+    # check if the lines make an X
+    # if the C-->D line intersect A-->B line between XofA and XofB
+        # possibleRaftelLocations += intersection point of CD and AB
+
+    # A to C, B to D CHECK
+
+    # A to D, B to C CHECK
+
+
 
 
 
 
 
 def main():
-    # start map empty
-    a_coord_x, a_coord_y, b_coord_x, b_coord_y, c_coord_x, c_coord_y = 5, 3, 1, 3, 8, 6
-    map_x, map_y = 10, 10
-
     # get map size and island location
+    map_x, map_y = 10, 10
+    a_coord_x, a_coord_y, b_coord_x, b_coord_y, c_coord_x, c_coord_y = 5, 3, 1, 3, 8, 6
+    
+
+    # start map empty
+
+
+
     # map_x, map_y = mapSize(map_x, map_y)
     # a_coord_x, a_coord_y, b_coord_x, b_coord_y, c_coord_x, c_coord_y = inputIslands(
     #     a_coord_x, a_coord_y, b_coord_x, b_coord_y, c_coord_x, c_coord_y
@@ -46,25 +75,30 @@ def main():
     # xpoints = np.array([0, map_x])
     # ypoints = np.array([0, map_y])
 
-    # plot points A, B, and C
-    plt.plot(a_coord_x, a_coord_y, ".")
-    plt.plot(b_coord_x, b_coord_y, ".")
-    plt.plot(c_coord_x, c_coord_y, ".")
+    
+    
+
+    # create map with islands
+    map_grid = setIslands(
+        a_coord_x,
+        a_coord_y,
+        b_coord_x,
+        b_coord_y,
+        c_coord_x,
+        c_coord_y,
+    )
+
+    setPossibleDLocations(
+        a_coord_x,
+        a_coord_y,
+        b_coord_x,
+        b_coord_y,
+        c_coord_x,
+        c_coord_y,
+    )
+
     # plt.plot(xpoints, ypoints)
     plt.show()
-
-    # # create map with islands
-    # map_grid = setIslands(
-    #     map_x,
-    #     map_y,
-    #     map_grid,
-    #     a_coord_x,
-    #     a_coord_y,
-    #     b_coord_x,
-    #     b_coord_y,
-    #     c_coord_x,
-    #     c_coord_y,
-    # )
 
 
 main()
